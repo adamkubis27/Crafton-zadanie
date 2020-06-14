@@ -1,0 +1,43 @@
+.popup {
+    @include flex(center, center);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    background: rgba($c-black, .6);
+    transition: all .4s ease;
+    &.is-hidden {
+        z-index: -100;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.popup__content {
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    max-width: 800px;
+    max-height: 600px;
+    background: #fff;
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.popup__close {
+    @include flex(center, center);
+    @include psa(-50px, 0, null, null);
+    width: 50px;
+    height: 50px;
+    background: $c-main;
+    color: $c-black;
+    cursor: pointer;
+}
+
+@media screen and (max-width: $mobile-xl) {
+
+}

@@ -1,0 +1,53 @@
+.t-section-title {
+    @include fz-h2;
+    font-weight: 700;
+    &--small {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+.t-content {
+    @include fz-big;
+    color: $c-content;
+    line-height: 1.8;
+    a {
+        color: $c-accent;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    p {
+        margin: 35px 0;
+    }
+    .t-ul-title {
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+    ul {
+        margin: 1.2em 0;
+        > li {
+            position: relative;
+            margin-left: 20px;
+            padding-left: 25px;
+            
+            &:not(:first-child) {
+                margin-top: 10px;
+            }
+            &:before {
+                content: '\2192';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+                color: $c-accent;
+                
+            }
+        }
+    }
+    
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+}

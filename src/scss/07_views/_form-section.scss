@@ -1,0 +1,106 @@
+.l-section--form {
+    @include flex(center, center);
+    background-color: #F5F8FA;
+    .hld-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.form {
+    @include flex(center, space-between, null, wrap);
+    width: 100%;
+    margin-top: 45px;
+    button {
+        margin: 0 auto;
+    }
+}
+
+.form-row {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    background: #fff;
+    &--small {
+        width: 48%;
+        max-width: 275px;
+    }
+    &--textarea {
+        height: 160px;
+    }
+    &--rodo {
+        @include flex(flex-start, flex-start);
+        height: auto;
+        background: none;
+    }
+}
+
+input:not(#rodo), textarea {
+    @include psa(0, null, null, 0);
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    border: 1px solid #ddd;
+    background: transparent;
+    transition: all .4s ease;
+    outline: none;
+    &:focus, &.valid-ok {
+        border: 1px solid red;
+        color: red;
+    }
+}
+textarea:focus, textarea.valid-ok{
+    border: 1px solid red;
+    color: red;
+}
+
+input:focus + .form__label, textarea:focus + .form__label, .valid-ok + .form__label {
+    @include psa(8px, null, null, 20px);
+    font-size: 8px;
+}
+input#rodo {
+    width: 17px;
+    height: 17px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.rodo__text {
+    width: calc(100% - 30px);
+    margin-left: 10px;
+    color: #002841;
+    font-size: 10px;
+    line-height: 150%;
+}
+textarea {
+    height: 160px;
+    padding-top: 15px;
+    resize: none;
+}
+
+.form__label {
+    @include psa(16px, null, null, 20px);
+    z-index: 0;
+    color: #7B94A5;
+    font-size: 15px;
+    transition: all .4s ease;
+} 
+
+
+.errors {
+    width: 100%;
+    border: 1px solid red;
+    background: rgba(red, .4);
+    padding: 20px;
+    color: #fff;
+    font-size: 12px;
+    li {
+        margin: 3px 0;
+    }
+}
+
+@media screen and (max-width: $mobile-s) {
+    .form-row--small {
+        width: 100%;
+        max-width: 100%;
+    }
+}

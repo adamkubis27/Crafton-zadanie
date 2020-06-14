@@ -1,0 +1,35 @@
+{
+  "name": "Boilerplate",
+  "version": "1.0.0",
+  "description": "Starterpack to static project on HTML Files with scss and js",
+  "main": "index.js",
+  "author": {
+    "name": "Adam Kubiś"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "ansi-colors": "^4.1.1",
+    "autoprefixer": "^9.7.1",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.26.7",
+    "browserify": "^16.5.0",
+    "cssnano": "^4.1.10",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "node-notifier": "^6.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "vanilla-lazyload": "^16.1.0"
+  }
+}

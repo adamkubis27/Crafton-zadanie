@@ -1,0 +1,93 @@
+@mixin psa($top: false, $right: false, $bottom: false, $left: false) {
+    position: absolute;
+    @if $top {
+    top: $top;
+    }
+    @if $right {
+    right: $right;
+    }
+    @if $bottom {
+    bottom: $bottom;
+    }
+    @if $left {
+        left: $left;
+    }
+}
+
+@mixin flex($align-items: false, $justify-content: false, $flex-direction: false, $flex-wrap: false) {
+    display: flex;
+    @if $align-items {
+        align-items: $align-items;
+    }
+    @if $justify-content {
+        justify-content: $justify-content;
+    }
+    @if $flex-direction {
+        flex-direction: $flex-direction;
+    }
+    @if $flex-wrap {
+        flex-wrap: $flex-wrap;
+    }
+}
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+/*======== TYPO CONTEXT ===============*/
+@mixin fz-h1() {
+    font-size: 40px;
+    font-weight: 200;
+    @media screen and (max-width: $mobile-s) {
+        font-size: 25px;
+    }
+}
+
+@mixin fz-h2() {
+    font-size: 36px;
+    @media screen and (max-width: $mobile-s) {
+        font-size: 25px;
+    }
+}
+
+@mixin fz-h3() {
+    font-size: 22px;
+    @media screen and (max-width: $mobile-s) {
+        font-size: 18px;
+    }
+}
+
+@mixin fz-h4() {
+    font-size: 18px;
+    @media screen and (max-width: $mobile-s) {
+        font-size: 16px;
+    }
+}
+
+@mixin fz-h5() {
+    font-size: 15px;
+    @media screen and (max-width: $mobile-s) {
+        font-size: 14px;
+    }
+}
+
+@mixin fz-big() {
+    font-size: 18px;
+    @media screen and (max-width: $mobile-s) {
+        font-size: 14px;
+    }
+}
+
+@mixin fz-normal() {
+    font-size: 15px;
+    @media screen and (max-width: $mobile-s) {
+        font-size: 14px;
+    }
+}
+
+@mixin fz-small() {
+    font-size: 13px;
+    @media screen and (max-width: $mobile-s) {
+        font-size: 13px;
+    }
+}

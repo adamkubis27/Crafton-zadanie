@@ -1,0 +1,48 @@
+.button-primary-filled {
+	@extend %button;
+	
+	border: solid 2px $c-accent;
+	background-color: $c-accent;
+	.text {
+		@extend %buttonText;
+		color: $c-white;
+	}
+	&:hover, &:focus {
+		border-color: darken($c-accent, 10%);
+		background-color: darken($c-accent, 10%);
+	}
+}
+
+.button-secondary-filled {
+	@extend %button;
+	border: solid 2px $c-white;
+	background-color: $c-white;
+	.text {
+		@extend %buttonText;
+		color: #002841;
+		
+	}
+	&:hover, &:focus {
+		border-color: $c-accent;
+		background-color: $c-accent;
+		.text {
+			color: $c-white;
+		}
+	}
+}
+
+.button-secondary-bordered {
+	@extend %button;
+	border: solid 2px $c-white;
+	background-color: transparent;
+	.text {
+        @extend %buttonText;
+		color: $c-white;
+	}
+	&:hover, &:focus {
+		background-color: $c-white;
+		.text {
+			color: #002841;
+		}
+	}
+}

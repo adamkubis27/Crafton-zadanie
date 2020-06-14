@@ -1,0 +1,16 @@
+%button {
+    display: inline-block;
+    position: relative;
+    padding: 15px 35px;
+    border-radius: 25px;
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+    transition: background-color .3s ease, border-color .3s ease;
+}
+%buttonText {
+    font-size: 14px;
+    line-height: 1.2;
+    white-space: nowrap;
+    transition: color .4s ease-in;
+}

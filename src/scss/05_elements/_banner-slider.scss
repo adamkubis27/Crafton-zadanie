@@ -1,7 +1,11 @@
 
 .banner-slider {
     position: relative;
+    overflow: hidden;
 }
+
+
+
 .banner-slider__items {
     width: 100%;
     height: 100vh;
